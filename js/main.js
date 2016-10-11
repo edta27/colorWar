@@ -2,7 +2,7 @@ console.log('here');
 // model
 
 // data model
-
+var baseUrl = "http://www.soundjay.com/button/";
 var result = "" // "win", "tie", or "loss"
 var cho1 = computerC;
 var cho2 = userChoice;
@@ -19,7 +19,7 @@ var gameWon = function(cho1,cho2){
     (cho1==="scissor" && cho2==="paper")
 
   ){
-    return("won");
+    return("lose");
   }
 
   if(cho1===cho2)
@@ -27,7 +27,7 @@ var gameWon = function(cho1,cho2){
   }
 
   else{
-    return("lose");
+    return("win");
   }
 
 };
@@ -65,8 +65,8 @@ $("#scissor").on("click", function() {
 //computer turn
 function turn () {
   //call AI in to a var
-  var cpu = AI()
 
+   var cpu = AI();
   // display AI on screen
   $('.deck1').removeClass('paper').removeClass('scissor').removeClass('rock')
   $('.deck1').addClass(cpu)
@@ -75,11 +75,25 @@ function turn () {
 
   result =  gameWon(cpu, playerChoice);
 
+  $('#result').removeClass('win').removeClass('lose').removeClass('tie')
   $('#result').addClass(result);
+
+  if (result == 'win') {
+    $('.win').addClass('animated flash');
+    setTimeout(function () {
+      $('.win').removeClass('animated flash');
+    }, 1000);
+  } else {
+    $('.lose').addClass('animated shake');
+    setTimeout(function () {
+      $('.lose').removeClass('animated shake');
+    }, 1000);
+
+  }
 
 }
 
-function AI () {
+function AI() {
 
   var cPu = Math.random();
   if( cPu <= 0.33){
@@ -90,9 +104,8 @@ function AI () {
   } else {
      cPu =('scissor')
   }
-  return cPu
+  return cPu;
 }
-
 
 
 

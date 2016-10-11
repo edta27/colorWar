@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <title>ColorWar</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+
 </head>
 <body>
 
 <main>
- <div id= result>Deck</div>
+ <div id= result class="result"></div>
  </main>
 
 
 <section>
 
 
-   <div id = computerChoice>
+   <div id = computerChoice class= " rubberBand animated" data-delay="1s">
     <div class="deckC"></div>
     <div class="deckC"></div>
     <div class="deckC"></div>
@@ -27,14 +31,17 @@
    </div>
    <div id = userC>
     <div class="deck2">player card Down</div>
+
+
+
+
    </div>
 
-   <div  id = userChoice>
-    <div id="rock" class="deckP"></div>
-    <div id="paper" class="deckP"></div>
-    <div id="scissor" class="deckP"></div>
+   <div  id = userChoice class= "rubberBand animated" data-delay="2s">
+   <div id="rock"    class="deckP" >ROCK </div>
+   <div id="paper"   class="deckP" >PAPER </div>
+   <div id="scissor" class="deckP" >SCISSOR </div>
    </div>
-
 </section>
 <script src="js/main.js" type="text/javascript"></script>
 </body>

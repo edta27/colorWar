@@ -11,7 +11,7 @@ main {
 
 
 section {
-  background-color: honeydew;
+  /*background-color: honeydew;*/
   height: 720px;
   width: 550px;
   display: inline-block;
@@ -36,9 +36,9 @@ section {
  border: solid 1px black;
   width: 160px;
   height: 160px;
-  background: red;
+  /*background: red;*/
   margin-left: 15px;
-  background-image: url("http://25.media.tumblr.com/1c96f268d91ebb98e130ce055b9116ce/tumblr_mzry95FE0o1sdgpnmo5_250.png")
+  background-image: url("http://25.media.tumblr.com/1c96f268d91ebb98e130ce055b9116ce/tumblr_mzry95FE0o1sdgpnmo5_250.png");
 
 
 }
@@ -50,34 +50,38 @@ section {
   border: solid 1px black;
   width: 160px;
   height: 160px;
-  background: red;
+  color: white;
   margin-left: 15px;
-  background-image: url("http://whysoblu.com/wp-content/uploads/2015/03/Spirited-Away.jpg")
+  background-image: url("http://whysoblu.com/wp-content/uploads/2015/03/Spirited-Away.jpg");
   }
 
 .rock {
   /*background-color: yellow;*/
-  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51lk0b9hyML._AC_UL160_SR160,160_.jpg")
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51lk0b9hyML._AC_UL160_SR160,160_.jpg");
 
 }
 
 .paper {
-  background-image: url("https://thumbs.dreamstime.com/t/blank-cardboard-paper-tape-transparent-shadow-place-your-text-vector-illustration-43598084.jpg")
+  background-image: url("https://thumbs.dreamstime.com/t/blank-cardboard-paper-tape-transparent-shadow-place-your-text-vector-illustration-43598084.jpg");
 }
 
 .scissor {
-  background-image: url("http://cdn.shopify.com/s/files/1/1055/0324/products/s-l500_4_fecbfe0e-a7f9-462e-901e-ccd1eafeccee_compact.jpg?v=1461214359")
+  background-image: url("http://cdn.shopify.com/s/files/1/1055/0324/products/s-l500_4_fecbfe0e-a7f9-462e-901e-ccd1eafeccee_compact.jpg?v=1461214359");
 }
 
 .win {
-  background-image: url("https://t4.ftcdn.net/jpg/00/33/24/59/160_F_33245909_ljQCPhB1y9FFIbbolVEPpMzPSFz7H1tt.jpg")
+  background-image: url("https://t4.ftcdn.net/jpg/00/33/24/59/160_F_33245909_ljQCPhB1y9FFIbbolVEPpMzPSFz7H1tt.jpg");
+  height:160px;
 }
 
 .lose{
-  background-image: url("https://t3.ftcdn.net/jpg/01/11/26/62/160_F_111266267_reNRywgYtWb2Exba0Ih2AYCIr7eyu16c.jpg")
-
+  background-image: url("https://t3.ftcdn.net/jpg/01/11/26/62/160_F_111266267_reNRywgYtWb2Exba0Ih2AYCIr7eyu16c.jpg");
+  height:160px;
 }
 
 .tie {
-  background-image: url("http://blog.equalrightsinstitute.com/wp-content/uploads/2013/10/equal.png")
+  background-image: url("http://blog.equalrightsinstitute.com/wp-content/uploads/2013/10/equal.png");
+  height:160px;
 }
+
+
