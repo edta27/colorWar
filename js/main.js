@@ -6,7 +6,7 @@ console.log('here');
 var result = "" // "win", "tie", or "loss"
 var cho1 = computerC;
 var cho2 = userChoice;
-
+var playerChoice = '';
 
 //Behavior
 
@@ -43,17 +43,20 @@ var gameWon = function(cho1,cho2){
 // removeClass removes a class
 $("#rock").on("click", function() {
    $(".deck2").addClass('rock').removeClass('paper').removeClass('scissor');
-
+   playerChoice = 'rock'
    turn()
 });
 
 $("#paper").on("click", function() {
    $(".deck2").addClass('paper').removeClass('rock').removeClass('scissor');
+   playerChoice = 'paper'
    turn()
+
 });
 
 $("#scissor").on("click", function() {
    $(".deck2").addClass('scissor').removeClass('paper').removeClass('rock');
+   playerChoice = 'scissor'
    turn()
 });
 
@@ -63,22 +66,14 @@ $("#scissor").on("click", function() {
 function turn () {
   //call AI in to a var
   var cpu = AI()
+
   // display AI on screen
- $('.deck1').addClass(cpu)
-     if (('.deck1') === 'rock') {
-     removeClass('paper').removeClass('scissor');
-     }
-    else if (('.deck1') === 'paper'){
-     removeClass('rock').removeClass('scissor');
-    }
-   else if (('.deck1') === 'scissor'){
-     removeClass('rock').removeClass('paper');
-    }
- // // $('.deck1').removeClass('rock').removeClass('paper').removeClass('scissor')
+  $('.deck1').removeClass('paper').removeClass('scissor').removeClass('rock')
+  $('.deck1').addClass(cpu)
 
   // determine result using gameWon()
 
-  result =  gameWon(AI(),'cho2');
+  result =  gameWon(cpu, playerChoice);
 
   $('#result').addClass(result);
 
