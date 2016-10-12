@@ -44,12 +44,20 @@ var gameWon = function(cho1,cho2){
 $("#rock").on("click", function() {
    $(".deck2").addClass('rock').removeClass('paper').removeClass('scissor');
    playerChoice = 'rock'
+    $('.deck2').addClass('animated bounceInDown');
+    setTimeout(function () {
+      $('.deck2').removeClass('animated bounceInDown');
+    }, 1000);
    turn()
 });
 
 $("#paper").on("click", function() {
    $(".deck2").addClass('paper').removeClass('rock').removeClass('scissor');
    playerChoice = 'paper'
+    $('.deck2').addClass('animated bounceInDown');
+    setTimeout(function () {
+      $('.deck2').removeClass('animated bounceInDown');
+    }, 1000);
    turn()
 
 });
@@ -57,11 +65,12 @@ $("#paper").on("click", function() {
 $("#scissor").on("click", function() {
    $(".deck2").addClass('scissor').removeClass('paper').removeClass('rock');
    playerChoice = 'scissor'
+    $('.deck2').addClass('animated bounceInDown');
+    setTimeout(function () {
+      $('.deck2').removeClass('animated bounceInDown');
+    }, 1000);
    turn()
 });
-
-
-
 
 
 
@@ -85,16 +94,16 @@ function turn () {
     $('.win').addClass('animated flash');
     setTimeout(function () {
       $('.win').removeClass('animated flash');
-    }, 1000);
-  } else {
-    $('.lose').addClass('animated shake');
-    setTimeout(function () {
-      $('.lose').removeClass('animated shake');
-    }, 1000);
-
-  }
+    }, 2000);
+     } else {
+      $('.lose').addClass('animated shake');
+       setTimeout(function () {
+       $('.lose').removeClass('animated shake');
+       }  , 2000);
+   }
 
 }
+
 
 function AI() {
 
@@ -146,7 +155,21 @@ function createRain() {
 createRain();
 
 
-//45degree
 
+//random
 
+function moveDiv() {
+    var $span = $("#random");
 
+    $span.fadeOut(3000, function() {
+        var maxLeft = $(window).width() - $span.width();
+        var maxTop = $(window).height() - $span.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
+
+        $span.css({ left: leftPos, top: topPos }).fadeIn(2000);
+    });
+};
+
+moveDiv();
+setInterval(moveDiv, 2000);
