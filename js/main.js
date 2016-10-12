@@ -130,10 +130,23 @@ function createRain() {
   $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
   $('#drop'+i).css('left',dropLeft);
   $('#drop'+i).css('top',dropTop);
+  $('#drop'+i).css({
+     '-moz-transform':'rotate(45deg)',
+     '-webkit-transform':'rotate(45deg)',
+     '-o-transform':'rotate(45deg)',
+     '-ms-transform':'rotate(45deg)',
+     'transform':'rotate(45deg)'
+});
+
   }
+
 
 }
 // Make it rain
 createRain();
+
+
+//45degree
+
 
 
