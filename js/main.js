@@ -173,3 +173,7 @@ function moveDiv() {
 
 moveDiv();
 setInterval(moveDiv, 2000);
+
+//click sound
+var bleep = new Audio();
+bleep.src = 'sound/button-20.mp3';
