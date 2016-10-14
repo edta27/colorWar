@@ -94,12 +94,12 @@ function turn () {
     $('.win').addClass('animated flash');
     setTimeout(function () {
       $('.win').removeClass('animated flash');
-    }, 2000);
+    }, 1500);
      } else {
       $('.lose').addClass('animated shake');
        setTimeout(function () {
        $('.lose').removeClass('animated shake');
-       }  , 2000);
+       }  , 1500);
    }
 
 }
@@ -122,7 +122,7 @@ function AI() {
 //make it rain
 
 // number of drops created.
-var nbDrop = 858;
+var nbDrop = 888;
 
 // function to generate a random number range.
 function randRange( minNum, maxNum) {

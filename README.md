@@ -60,7 +60,7 @@ I also add the theme song of spirited away as the background music. I set
 it to auto play, becuase I really like the music and I really hope people
 can finish listening the whole song. 
 
-##Test
+##Test/Challenge
 I use Chrome console to test and check if I have issue with the script. When I was woking at the AI, since I only have 3 variables, I used Math.random to test the range, then I split it into 3 for rock, paper, scissor.
 
 ```
