@@ -1,6 +1,8 @@
 #Spirit Away
 ##Story
 
+https://edta27.github.io/colorWar/
+
 This is a rock paper scissor game. There is a story behind this game when**Chihiro Ogino** from a movie call *spirit away* met **"No face"**. **"No face"** is really lonely and he has no one to play with, so **Chihiro** plays rock, paper, scissor  with him/her when they are on the train to see Yubaba where she lives inside the forrest. The background is a forrest thats what they see outside of the train. 
 
 
